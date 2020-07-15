@@ -28,7 +28,7 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptCli
             public Dept get(Long id) {
                 Dept dept = new Dept();
                 dept.setDeptno(id);
-                dept.setDname("该ID：" + id + "没有对应的信息，Consumer客户端提供的信息，此服务Provider已关闭");
+                dept.setDname("该ID：" + id + "没有对应的信息，Consumer客户端提供的信息，此服务Provider已关闭"+throwable);
                 dept.setDb_source("no this database in mysql");
                 return dept;
             }

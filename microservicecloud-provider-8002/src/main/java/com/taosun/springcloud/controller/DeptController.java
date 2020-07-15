@@ -27,7 +27,10 @@ public class DeptController {
     @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET)
     public Dept get(@PathVariable("id") Long id){
 
-        return deptService.get(id);
+//
+        Dept dept = new Dept();
+        dept.setDname("qew");
+        return dept;
     }
 
     @RequestMapping(value = "/dept/list" ,method = RequestMethod.GET)

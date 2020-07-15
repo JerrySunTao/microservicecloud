@@ -1,6 +1,7 @@
 package com.taosun.springcloud.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.taosun.springcloud.entities.Dept;
 import com.taosun.springcloud.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,10 @@ public class DeptController {
 
 
     @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET)
-    @HystrixCommand(fallbackMethod = "processHystrix_Get")
+    @HystrixCommand(fallbackMethod = "processHystrix_Get",threadPoolKey = "getIdThread",threadPoolProperties = {
+            @HystrixProperty(name = "coreSize",value = "1"),
+            @HystrixProperty(name = "maxQueueSize",value = "20")
+    })
     public Dept get(@PathVariable("id") Long id){
 
         Dept dept= deptService.get(id);
