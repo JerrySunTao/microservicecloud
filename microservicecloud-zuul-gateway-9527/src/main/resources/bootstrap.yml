@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: springcloud-config-pro
+      profile: pro
+      label: master
+      uri: http://127.0.0.1:9001
