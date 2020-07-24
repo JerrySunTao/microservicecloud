@@ -25,6 +25,7 @@
         <module>microservicecloud-consumer-hystrix-dashboard</module>
         <module>microservicecloud-consumer-hystrix-turbine</module>
         <module>microservicecloud-zuul-gateway-9527</module>
+        <module>microservicecloud-properties-config</module>
     </modules>
 
     <properties>

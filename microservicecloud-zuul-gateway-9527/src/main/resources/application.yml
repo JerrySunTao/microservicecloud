@@ -23,11 +23,13 @@ info:
   build.version: ${project.version}
 
 
-zuul:
-  prefix: /taosun #访问前缀
-  ignored-services: "*" #不能使用微服务名访问，只能使用别名
-  routes:
-    microservicecloud-dept: /mydept/** #前面为注册的微服务名: 微服务别名,因此可以注册多个微服务名
+#zuul:
+#  prefix: /taosun #访问前缀
+#  ignored-services: "*" #不能使用微服务名访问，只能使用别名
+#  routes:
+#    microservicecloud-dept: /mydept/** #前面为注册的微服务名: 微服务别名,因此可以注册多个微服务名
+#    microservicecloud-feign: /myfeign/**
+
 
 #   mydept.serviceId: microservicecloud-dept 这种写法和上面一样
 #   mydept.path: /mydept/**

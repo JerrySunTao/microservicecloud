@@ -29,7 +29,7 @@ public class DeptController {
 
 //
         Dept dept = new Dept();
-        dept.setDname("qew");
+        dept.setDname("qew2");
         return dept;
     }
 
